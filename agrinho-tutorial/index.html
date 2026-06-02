@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial completo para o Concurso Agrinho 2026 de Programação">
+    <meta name="theme-color" content="#2d6a2d">
+    <title>Agrinho 2026 - Tutorial de Programação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <i class="fas fa-leaf"></i>
+                <span>Agrinho 2026</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#ambiente">Ambiente</a></li>
+                <li><a href="#projeto">Projeto</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#regras">Regras</a></li>
+                <li><a href="#modelo">Modelo</a></li>
+                <li><a href="#submissao">Submissão</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>🌾 Agro Forte, Futuro Sustentável</h1>
+            <p class="hero-subtitle">Tutorial Completo - Concurso Agrinho 2026 de Programação</p>
+            <p class="hero-description">Guia para estudantes da rede pública do Paraná desenvolverem projetos de programação</p>
+            <a href="#ambiente" class="cta-button">Começar Agora</a>
+        </div>
+        <div class="hero-background"></div>
+    </header>
+
+    <section id="intro" class="section">
+        <div class="container">
+            <h2>Bem-vindo ao Tutorial Agrinho 2026</h2>
+            <p>Este tutorial foi elaborado para auxiliar estudantes a desenvolverem e submeterem seus projetos no <strong>Concurso Agrinho 2026</strong> de programação.</p>
+            
+            <div class="subcategorias">
+                <div class="subcategory-card">
+                    <div class="icon">📚</div>
+                    <h3>Subcategoria 1</h3>
+                    <p><strong>6º e 7º anos</strong></p>
+                    <p>Linguagem: <span class="tag">Scratch</span></p>
+                </div>
+                <div class="subcategory-card">
+                    <div class="icon">🖥️</div>
+                    <h3>Subcategoria 2</h3>
+                    <p><strong>8º e 9º anos</strong></p>
+                    <p>Linguagem: <span class="tag">Scratch</span></p>
+                </div>
+                <div class="subcategory-card">
+                    <div class="icon">⚡</div>
+                    <h3>Subcategoria 3</h3>
+                    <p><strong>Ensino Médio</strong></p>
+                    <p>Linguagem: <span class="tag">Front-End</span> (HTML, CSS, JS)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ambiente" class="section bg-light">
+        <div class="container">
+            <h2>Preparando o Ambiente de Desenvolvimento</h2>
+            
+            <div class="tabs">
+                <button class="tab-button active" data-tab="scratch">Scratch (1º e 2º)</button>
+                <button class="tab-button" data-tab="frontend">Front-End (3º)</button>
+            </div>
+
+            <div class="tab-content active" id="scratch-tab">
+                <h3>Para Scratch (Subcategorias 1 e 2)</h3>
+                <ol class="step-list">
+                    <li>
+                        <strong>Acesse o Scratch</strong>
+                        <p>Vá para <a href="https://scratch.mit.edu" target="_blank">scratch.mit.edu</a> e crie uma conta (ou use a conta escolar).</p>
+                    </li>
+                    <li>
+                        <strong>Crie um novo projeto</strong>
+                        <p>Clique em "Criar" para iniciar um novo projeto.</p>
+                    </li>
+                    <li>
+                        <strong>Desenvolva seu projeto</strong>
+                        <p>Utilize apenas a interface online do Scratch; não é necessário instalar nada.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tab-content" id="frontend-tab">
+                <h3>Para Front-End (Subcategoria 3)</h3>
+                <p>Você precisará de um editor de código e do Git. Recomendamos:</p>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Visual Studio Code</h4>
+                        <p>Editor de código</p>
+                        <a href="https://code.visualstudio.com/" target="_blank" class="tool-link">Baixar →</a>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-git-alt"></i>
+                        <h4>Git</h4>
+                        <p>Controle de versão</p>
+                        <a href="https://git-scm.com/" target="_blank" class="tool-link">Baixar →</a>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-github"></i>
+                        <h4>GitHub</h4>
+                        <p>Repositório online</p>
+                        <a href="https://github.com/" target="_blank" class="tool-link">Criar conta →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projeto" class="section">
+        <div class="container">
+            <h2>Criando o Projeto Front-End</h2>
+
+            <h3>Estrutura de Pastas e Arquivos</h3>
+            <div class="code-block">
+                <pre><code>agrinho_projeto/
+    index.html
+    style.css
+    script.js
+    README.md
+    img/
+        (suas imagens)</code></pre>
+            </div>
+
+            <div class="files-section">
+                <div class="file-card">
+                    <h3>📄 index.html</h3>
+                    <p>A estrutura semântica do seu site</p>
+                    <button class="toggle-code" data-file="html">Ver código</button>
+                    <div class="code-preview" id="html-code">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Agrinho - Agro Forte, Futuro Sustentável&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Agro Forte, Futuro Sustentável&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Início&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#praticas"&gt;Práticas Sustentáveis&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#calculadora"&gt;Calculadora de Impacto&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;!-- Conteúdo principal --&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2026 - Projeto Agrinho&lt;/p&gt;
+    &lt;/footer&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="file-card">
+                    <h3>🎨 style.css</h3>
+                    <p>Estilo responsivo com Flexbox</p>
+                    <button class="toggle-code" data-file="css">Ver código</button>
+                    <div class="code-preview" id="css-code">
+                        <pre><code>body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f9f4;
+}
+
+header {
+    background-color: #2c5e2e;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="file-card">
+                    <h3>⚙️ script.js</h3>
+                    <p>Interatividade e lógica da aplicação</p>
+                    <button class="toggle-code" data-file="js">Ver código</button>
+                    <div class="code-preview" id="js-code">
+                        <pre><code>// Função para calcular economia de água
+function calcularEconomia() {
+    let area = document.getElementById('area').value;
+    let resultado = document.getElementById('resultado');
+    
+    if(area && area > 0) {
+        let economia = area * 1.5; // litros por hectare
+        resultado.innerText = `Com práticas sustentáveis, 
+        você economiza ${economia} litros de água por dia.`;
+    } else {
+        resultado.innerText = 'Por favor, insira uma área válida (hectares).';
+    }
+}
+
+// Evento de clique
+document.getElementById('calcularBtn')?.addEventListener('click', calcularEconomia);</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="github" class="section bg-light">
+        <div class="container">
+            <h2>Publicando no GitHub e Configurando GitHub Pages</h2>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Criando o Repositório</h3>
+                        <ol>
+                            <li>Faça login no GitHub</li>
+                            <li>Clique em "New repository"</li>
+                            <li>Nome: <code>Agrinho</code></li>
+                            <li>Escolha <strong>Público</strong></li>
+                            <li>Clique em "Create repository"</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Enviando o Projeto Local</h3>
+                        <div class="code-block">
+                            <pre><code>git init
+git add .
+git commit -m "Primeira versão do projeto Agrinho"
+git remote add origin https://github.com/SEU_USUARIO/Agrinho.git
+git branch -M main
+git push -u origin main</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Ativando GitHub Pages</h3>
+                        <ol>
+                            <li>Vá em <strong>Settings → Pages</strong></li>
+                            <li>Selecione <code>main</code> branch</li>
+                            <li>Pasta: <code>/(root)</code></li>
+                            <li>Clique em <strong>Save</strong></li>
+                            <li>Seu site estará em: <code>https://SEU_USUARIO.github.io/Agrinho/</code></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Configurando o Link no "About"</h3>
+                        <ol>
+                            <li>Na página do repositório, clique em <strong>About</strong> (engrenagem)</li>
+                            <li>Marque "Use your GitHub Pages website"</li>
+                            <li>Cole o link do GitHub Pages</li>
+                            <li>Adicione a tag <code>agrinho</code> nos <strong>Topics</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="regras" class="section">
+        <div class="container">
+            <h2>Regras Importantes da Subcategoria 3 (Front-End)</h2>
+
+            <div class="rules-grid">
+                <div class="rules-card obrigatorio">
+                    <h3>✅ O que é Obrigatório</h3>
+                    <ul>
+                        <li>Arquivos <code>index.html</code>, <code>style.css</code>, <code>script.js</code> separados</li>
+                        <li>Repositório público com tag <code>agrinho</code></li>
+                        <li>README.md com instruções</li>
+                        <li>Link do GitHub Pages funcional</li>
+                        <li>Sem frameworks (HTML/CSS/JS puro)</li>
+                        <li>Código indentado e comentado</li>
+                        <li>Imagens próprias ou com créditos</li>
+                    </ul>
+                </div>
+
+                <div class="rules-card desclassificacao">
+                    <h3>❌ O que Causa Desclassificação</h3>
+                    <ul>
+                        <li>Projetos idênticos entre estudantes</li>
+                        <li>Merge de repositórios ou código copiado</li>
+                        <li>CSS/JS inline ou interno</li>
+                        <li>Ausência da tag <code>agrinho</code></li>
+                        <li>Link do GitHub Pages não funcionante</li>
+                        <li>Conteúdo não alinhado ao tema</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dicas" class="section bg-light">
+        <div class="container">
+            <h2>Dicas para Alcançar os Melhores Níveis</h2>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Objetivo (Nível 4)</h3>
+                    <ul>
+                        <li>Documente fluxos e atores</li>
+                        <li>Alinhamento total com o tema</li>
+                        <li>Objetivo claro e evidente</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Algoritmo e Código (Nível 4)</h3>
+                    <ul>
+                        <li>Use laços e funções</li>
+                        <li>Variáveis significativas</li>
+                        <li>Comente as funções</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <i class="fas fa-mouse"></i>
+                    <h3>Usabilidade (Nível 4)</h3>
+                    <ul>
+                        <li>Teste em vários navegadores</li>
+                        <li>Design responsivo</li>
+                        <li>Instruções claras</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Originalidade (Nível 4)</h3>
+                    <ul>
+                        <li>Conteúdo próprio</li>
+                        <li>Imagens personalizadas</li>
+                        <li>Evite templates prontos</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Publicação (Nível 4)</h3>
+                    <ul>
+                        <li>README completo</li>
+                        <li>Repositório limpo</li>
+                        <li>Sem erros no console</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Tema (Nível 4)</h3>
+                    <ul>
+                        <li>Agro + Sustentabilidade</li>
+                        <li>Equilíbrio produção/meio ambiente</li>
+                        <li>Impacto claro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modelo" class="section">
+        <div class="container">
+            <h2>Projeto Modelo Completo</h2>
+            <p class="section-subtitle">Um exemplo mínimo mas completo que atende aos requisitos de Nível 4</p>
+
+            <div class="modelo-demo">
+                <h3>💧 Calculadora de Economia de Água - Demonstração</h3>
+                <p>Teste a calculadora abaixo para ver como funciona:</p>
+                
+                <div class="calculator-demo">
+                    <label for="demoArea">Área plantada (hectares):</label>
+                    <div class="input-group">
+                        <input type="number" id="demoArea" placeholder="Ex: 10" min="0">
+                        <button onclick="calcularEconomiaDemo()">Calcular</button>
+                    </div>
+                    <p id="demoResultado" class="resultado-demo"></p>
+                </div>
+
+                <h3>Arquivos do Modelo</h3>
+                <div class="modelo-files">
+                    <button class="file-tab active" data-tab="modelo-html">index.html</button>
+                    <button class="file-tab" data-tab="modelo-css">style.css</button>
+                    <button class="file-tab" data-tab="modelo-js">script.js</button>
+                    <button class="file-tab" data-tab="modelo-readme">README.md</button>
+                </div>
+
+                <div class="modelo-content" id="modelo-html">
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Agrinho - Sustentabilidade no Campo&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;🌾 Agro Forte, Futuro Sustentável&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#inicio"&gt;Início&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#dicas"&gt;Dicas&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#calculadora"&gt;Calculadora&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;section id="inicio" class="container"&gt;
+            &lt;h2&gt;Equilíbrio entre produção e meio ambiente&lt;/h2&gt;
+            &lt;p&gt;O agronegócio sustentável é a chave para alimentar o mundo sem destruir o planeta!&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section id="dicas" class="container"&gt;
+            &lt;h2&gt;📌 Práticas sustentáveis&lt;/h2&gt;
+            &lt;div class="card"&gt;
+                &lt;h3&gt;Rotação de culturas&lt;/h3&gt;
+                &lt;p&gt;Alternar plantações preserva o solo e reduz pragas.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section id="calculadora" class="container"&gt;
+            &lt;h2&gt;💧 Calculadora de economia de água&lt;/h2&gt;
+            &lt;label for="area"&gt;Área plantada (hectares):&lt;/label&gt;
+            &lt;input type="number" id="area" placeholder="Ex: 10"&gt;
+            &lt;button id="calcularBtn"&gt;Calcular economia&lt;/button&gt;
+            &lt;p id="resultado"&gt;&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Projeto Agrinho 2026 | Autoria própria&lt;/p&gt;
+    &lt;/footer&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <div class="modelo-content hidden" id="modelo-css">
+                    <pre><code>body {
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #eaf7ea;
+    color: #1e3a1e;
+}
+
+header {
+    background: #2d6a2d;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card {
+    background: #f9f9f9;
+    border-left: 5px solid #2d6a2d;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+button {
+    background: #2d6a2d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e4a1e;
+    transform: translateY(-2px);
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1e3a1e;
+    color: #ccc;
+    margin-top: 3rem;
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .container {
+        margin: 1rem;
+    }
+}</code></pre>
+                </div>
+
+                <div class="modelo-content hidden" id="modelo-js">
+                    <pre><code>// script.js - Projeto Agrinho 2026
+// Função para calcular economia de água
+function calcularEconomia() {
+    // Obtém o valor do campo de entrada
+    let areaInput = document.getElementById('area');
+    let resultadoParagrafo = document.getElementById('resultado');
+    let area = parseFloat(areaInput.value);
+    
+    // Validação
+    if (isNaN(area) || area <= 0) {
+        resultadoParagrafo.innerText = '❌ Por favor, insira uma área válida.';
+        return;
+    }
+    
+    // Cálculo: 1.500 litros por hectare por dia
+    let economiaLitros = area * 1500;
+    resultadoParagrafo.innerHTML = 
+        `💧 Você economiza <strong>${economiaLitros.toLocaleString()} litros</strong> por dia!`;
+}
+
+// Adiciona evento ao botão
+const botao = document.getElementById('calcularBtn');
+if (botao) {
+    botao.addEventListener('click', calcularEconomia);
+}</code></pre>
+                </div>
+
+                <div class="modelo-content hidden" id="modelo-readme">
+                    <pre><code"># 🌱 Agro Forte, Futuro Sustentável
+
+**Concurso Agrinho 2026** – Subcategoria 3 (Front-End)
+
+## Objetivo
+Conscientizar sobre a importância de práticas agrícolas sustentáveis que aliam produtividade e preservação ambiental.
+
+## Tecnologias utilizadas
+- HTML5 semântico
+- CSS3 (Flexbox, Media Queries)
+- JavaScript (manipulação do DOM, validação)
+
+## Como acessar
+GitHub Pages: https://SEU_USUARIO.github.io/Agrinho
+
+## Funcionalidades
+- Dicas de sustentabilidade
+- Calculadora de economia de água
+- Design responsivo
+
+## Originalidade
+Todos os textos e códigos são de autoria do estudante.
+
+## Licença
+Projeto educacional - 2026</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="submissao" class="section bg-light">
+        <div class="container">
+            <h2>Instruções para Submissão</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Etapa Escolar</h3>
+                        <ul>
+                            <li>Desenvolva o projeto</li>
+                            <li>Envie o link do repositório/Scratch</li>
+                            <li>Prazo: <strong>14/06/2026 às 23h59</strong></li>
+                            <li>Não altere após envio!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Etapa Regional</h3>
+                        <ul>
+                            <li>Escola seleciona até 3 projetos por subcategoria</li>
+                            <li>Professor envia para o NRE</li>
+                            <li>Avaliação pela rubrica</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Etapa Estadual</h3>
+                        <ul>
+                            <li>129 melhores projetos premiados (43 por subcategoria)</li>
+                            <li>Resultado: primeira quinzena de setembro 2026</li>
+                            <li>Cerimônia em Curitiba (novembro 2026)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Verificação Final</h3>
+            <div class="checklist">
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>O projeto está totalmente funcional</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>Link do GitHub Pages correto e acessível</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>Repositório com tag <code>agrinho</code></span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>README.md completo</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>Sem CSS/JS inline ou interno</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>Código indentado e comentado</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>Arquivos organizados corretamente</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>Imagens próprias ou com créditos</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox">
+                    <span>Projeto alinha ao tema "Agro forte, futuro sustentável"</span>
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Dúvidas e Contato</h2>
+            <p>Em caso de dúvidas sobre o regulamento ou submissão:</p>
+            <a href="mailto:agrinhoprogramacao@escola.pr.gov.br" class="email-link">
+                <i class="fas fa-envelope"></i>
+                agrinhoprogramacao@escola.pr.gov.br
+            </a>
+            <p class="motivacao">Boa sorte a todos! Desenvolvam com criatividade e responsabilidade ambiental. 🌱</p>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 - Concurso Agrinho de Programação | Secretaria de Estado da Educação do Paraná</p>
+            <p>Tutorial desenvolvido para auxiliar estudantes na elaboração de projetos de programação.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
